@@ -15,6 +15,7 @@ func main() {
 	useall := UseAll{Name: "Vasiliy", Surname: "Konstantinov", Year: 2021}
 
 	t, err := json.Marshal(&useall)
+	fmt.Println("t->",t)
 	if err != nil {
 		fmt.Println(err)
 	} else {
@@ -25,6 +26,7 @@ func main() {
 	jsonRecord := []byte(str)
 	temp := UseAll{}
 	err = json.Unmarshal(jsonRecord, &temp)
+	fmt.Println("jsonRecord->", jsonRecord)
 	if err != nil {
 		fmt.Println(err)
 	} else {
